@@ -235,3 +235,42 @@ console.log(miParametro);
 }
 
 noSeats()
+
+const formulario = document.getElementById('formulario');
+
+let invitados = {}
+
+formulario.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evitar el envío predeterminado del formulario
+      // ... (código para procesar los datos del formulario)
+
+      function alerta() {
+      alert("¡Enviado con éxito!");
+    }
+
+      const formData = new FormData(formulario);
+      const SI = formData.get('r01');
+      const NO = formData.get('r02');
+      const nombre = formData.get('nombre');
+      const cancion = formData.get('cancion');
+      const msj = formData.get('msj');
+
+
+      const queryString = window.location.search.substring(1); // Elimina el '?'
+      const params = {};
+      queryString.split('&').forEach(pair => {
+        const [key, value] = pair.split('=');
+        params[key] = decodeURIComponent(value || ''); // Decodifica el valor (si existe)
+      });
+      const miParametro = params['value'];
+      console.log(miParametro);
+      if(SI) {
+        invitados[miParametro] = [nombre,cancion,msj,SI]
+      } else {invitados[miParametro] = [nombre,cancion,msj,NO]}
+      console.log(invitados)
+
+
+      localStorage.setItem(`${miParametro}`, JSON.stringify(invitados));
+      alerta();
+
+    });
