@@ -46,6 +46,23 @@ button {
   font-family: fuente01;
   color: #9faf95;
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) 
+and (orientation : portrait) {
+ //CSS 
+ .nums {
+  top:62.5vw!important;
+}
+}
+
+@media only screen and (min-device-width : 160px) and (max-device-width : 600px) 
+and (orientation : portrait) {
+ //CSS 
+fieldset {
+    margin-top: 1vw!important;
+    margin-bottom: 1vw!important;
+}
+}
+
 
 @media (min-width: 190px) {
   
@@ -64,9 +81,58 @@ button {
  @media (min-width: 320px) {
   
    .nums {
+  top:58vw;
+}
+ }
+
+ @media (min-width: 320px) {
+  
+   .nums {
+  top:59vw;
+}
+ }
+
+  @media (min-width: 390px) {
+  
+   .nums {
+  top:60vw;
+}
+ }
+
+  @media (min-width: 620px) {
+  
+   .nums {
   top:61vw;
 }
  }
+
+ @media (min-width: 190px)  and (orientation: portrait){
+  
+   .nums {
+  top: 62vw!important;
+}
+ }
+
+  @media (min-width: 350px)  and (orientation: portrait){
+  
+   #cancion {
+  margin-bottom: 4vw!important;
+}
+ }
+
+  @media (min-width: 420px)  and (orientation: portrait){
+  #nombre {
+    margin-top: 1vw!important;
+  }
+ }
+
+ @media (min-width: 600px)  and (orientation: portrait){
+  #nombre {
+    margin-top: 3vw!important;
+  }
+ }
+
+ 
 
 #dias {
   left: 44%
@@ -231,7 +297,7 @@ button {
 
    #nombre {
     margin-top:1vw;
-    margin-bottom: 4vw;
+    margin-bottom: 3vw;
    }
 
    #cancion {
@@ -385,6 +451,29 @@ background: #9faf95;;
   #r02 {
     left: 30.5vw;
   }
+
+  @media (min-width: 190px)  and (orientation: portrait){
+  #r01 {
+    left: 9vw;
+  }
+
+  
+  #r02 {
+    left: 32.5vw;
+  }
+ }
+
+ @media (min-width: 600px)  and (orientation: portrait){
+  #r02 {
+    left: 33vw!important;
+  }
+
+  #r01,#r02 {
+    top: 10px;
+  }
+ }
+
+ 
 
   @media (min-width: 600px ) {
     #r02 {
